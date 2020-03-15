@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="uploadfile.MainPage">
+
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+               
+                
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button x:Name="btnSelectPic" Grid.Row="0" Grid.Column="0" Text="Select picture" Clicked="btnSelectPic_Clicked" BackgroundColor="DodgerBlue" TextColor="White" />
+            <Button x:Name="btnTakePic" Grid.Row="0" Grid.Column="1" Text="Take picture" Clicked="btnTakePic_Clicked" BackgroundColor="DodgerBlue" TextColor="White" />
+            <Button x:Name="btnTakefile" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="select file" Clicked="btnSelectFile_Clicked" BackgroundColor="DodgerBlue" TextColor="White" />
+        </Grid>
+        <Image x:Name="imageView" HeightRequest="300" WidthRequest="400" />
+        <ActivityIndicator x:Name="uploadIndicator" IsVisible="False" IsRunning="False" Color="DodgerBlue" />
+        <Button Text="Upload to server" Clicked="btnUpload_Clicked" x:Name="btnUpload" BackgroundColor="Green" TextColor="White" />
+        <Editor x:Name="UploadedUrl" TextColor="Black" HeightRequest="85" Text="Image URL:" />
+    </StackLayout>
+
+</ContentPage>
